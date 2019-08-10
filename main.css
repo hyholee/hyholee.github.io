@@ -1,0 +1,92 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
+}
+/* -------------------------------------------- */
+/* NAV SEC */
+.nav {
+  background-color: white;
+  padding: 10px 200px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+}
+.top_menu {
+  padding: 10px 0;
+}
+.menu_items {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: inline-block;
+}
+.menu_items_list {
+  font-weight: 200;
+  display: inline-block;
+}
+.menu_item {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 0.9em;
+}
+/* -------------------------------------------- */
+/* MAIN SEC */
+.main {
+  background-color: red;
+}
+.about,
+.profile,
+.resume,
+.project {
+  padding: 0 200px;
+  margin: 0 auto;
+}
+.heading {
+  background-color: bisque;
+  height: calc(100vh - 50px);
+}
+.heading > h1,
+h2 {
+  text-align: center;
+}
+/* -------------------------------------------- */
+.about {
+  background-color: coral;
+  height: 100vh;
+}
+.about_icon {
+  background-color: cadetblue;
+}
+.about_icon_items {
+  display: flex;
+  justify-content: space-between;
+}
+.about_icon_item {
+  background-color: yellow;
+  display: inline-block;
+  width: 20%;
+  height: 200px;
+}
+/* -------------------------------------------- */
+.profile {
+  background-color: cornflowerblue;
+  height: 100vh;
+}
+/* -------------------------------------------- */
+.resume {
+  background-color: violet;
+  height: 100vh;
+}
+/* -------------------------------------------- */
+.project {
+  background-color: teal;
+  height: 100vh;
+}
+/* -------------------------------------------- */
+/* FOOTER SEC */
+.footer {
+  background-color: #18191a;
+  height: 100vh;
+}
