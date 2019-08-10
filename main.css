@@ -90,3 +90,6 @@ h2 {
   background-color: #18191a;
   height: 100vh;
 }
+.footer > p {
+  color: wheat;
+}
