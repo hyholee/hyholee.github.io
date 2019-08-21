@@ -9,23 +9,9 @@ body {
 }
 .subtitle {
   font-size: 1.3 em;
+  margin-bottom: 30px;
 }
-/* SKILL LEVEL */
-.skill_level_bar {
-  background-color: turquoise;
-  display: inline-block;
-  width: 40%;
-}
-.skill {
-  background-color: bisque;
-}
-.blank {
-  background-color: grey;
-  display: inline-block;
-  width: 18%;
-  height: 5px;
-  border-radius: 5px;
-}
+
 /* -------------------------------------------- */
 /* NAV SEC */
 .nav {
@@ -57,7 +43,7 @@ body {
 /* -------------------------------------------- */
 /* MAIN SEC */
 .main {
-  background-color: red;
+  /* background-color: blanchedalmond; */
 }
 .about,
 .profile,
@@ -79,9 +65,7 @@ h2 {
 }
 /* -------------------------------------------- */
 .about {
-  background-color: coral;
-}
-.title_about {
+  /* background-color: coral; */
 }
 .about_hook {
   margin-bottom: 50px;
@@ -90,7 +74,7 @@ h2 {
   margin-bottom: 50px;
 }
 .about_icon {
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
 }
 .about_icon_items {
   display: flex;
@@ -104,23 +88,124 @@ h2 {
   height: 200px;
 }
 /* -------------------------------------------- */
+/* SKILL LEVEL */
+.skill_level_bar {
+  /* background-color: turquoise; */
+  display: inline-block;
+  margin: 20px 0;
+  width: 100%;
+}
+.skill_name {
+  margin-bottom: 10px;
+}
+.skill {
+  /* background-color: blue; */
+}
+.blank {
+  background-color: #ededed;
+  display: inline-block;
+  width: 19%;
+  height: 5px;
+  border-radius: 5px;
+}
+/* PROFILE SEC */
 .profile {
-  background-color: cornflowerblue;
-  height: 100vh;
+  /* background-color: cornflowerblue; */
+}
+.skill_contents {
+  /* background-color: tomato; */
 }
 .profile_skill {
-  background-color: tomato;
+  display: flex;
+  justify-content: space-between;
+}
+.col1,
+.col2 {
+  display: inline-block;
+  width: 48%;
+}
+.col1 {
+  /* background-color: red; */
+}
+.col2 {
+  /* background-color: green; */
 }
 
+.dev {
+  margin-top: 50px;
+}
+
+/* EDU */
+.edu_contents {
+  /* background-color: tomato; */
+  margin-top: 100px;
+}
+.subEduTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.edu_title,
+.award_title {
+  display: inline-block;
+  width: 48%;
+  float: left;
+}
+
+.extra_profile_info {
+  display: flex;
+  justify-content: space-between;
+}
+.edu_year,
+.award_year {
+  /* background-color: darkturquoise; */
+  display: inline-block;
+  width: 100px;
+  margin-right: 40px;
+  float: left;
+}
+.edu_content,
+.award_content {
+  /* background-color: greenyellow; */
+  display: inline-block;
+}
+.edu_item,
+.award_item {
+  margin: 40px 0;
+}
 /* -------------------------------------------- */
+/* RESUME SEC */
 .resume {
   background-color: violet;
   height: 100vh;
 }
 /* -------------------------------------------- */
+/* PROJECT SEC */
 .project {
   background-color: teal;
   height: 100vh;
+}
+.project_item {
+  background-color: springgreen;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.project_item_contents {
+  background-color: violet;
+  display: inline-block;
+  width: 30%;
+  height: 400px;
+}
+.project_item_img {
+  background-color: blue;
+  width: 100%;
+  height: 180px;
+}
+.project_item_description {
+  background-color: yellow;
+  height: calc(100% - 220px);
+  padding: 20px;
 }
 /* -------------------------------------------- */
 /* FOOTER SEC */
