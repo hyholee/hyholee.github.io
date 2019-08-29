@@ -14,12 +14,14 @@ body {
 
 /* -------------------------------------------- */
 /* NAV SEC */
-.nav {
+.top {
   background-color: white;
-  padding: 10px 200px;
-  margin: 0 auto;
   position: sticky;
   top: 0;
+}
+.nav {
+  padding: 10px 270px;
+  margin: 0 auto;
 }
 .top_menu {
   padding: 10px 0;
@@ -40,21 +42,43 @@ body {
   margin: 0 20px;
   font-size: 0.9em;
 }
+@media screen and (max-width: 767px) {
+  .nav {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 540px;
+  }
+  .top_menu {
+    padding: 10px 0;
+  }
+  .menu_items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo {
+    display: inline-block;
+  }
+  .menu_item {
+    display: none;
+    margin: 0 20px;
+    font-size: 0.9em;
+  }
+}
 /* -------------------------------------------- */
 /* MAIN SEC */
 .main {
-  /* background-color: blanchedalmond; */
+  background-color: blanchedalmond;
 }
 .about,
 .profile,
 .resume,
 .project {
-  padding: 0 200px;
+  padding: 0 270px;
   margin: 0 auto;
 }
 .heading {
   background-color: bisque;
-  height: calc(100vh - 50px);
+  height: 50vh;
 }
 .heading > h1,
 h2 {
@@ -63,9 +87,33 @@ h2 {
   width: 500px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  .main {
+    background-color: rgb(16, 235, 184);
+  }
+  .about,
+  .profile,
+  .resume,
+  .project {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 540px;
+  }
+  .heading {
+    background-color: bisque;
+    height: 50vh;
+  }
+  .heading > h1,
+  h2 {
+    background-color: aquamarine;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+  }
+}
 /* -------------------------------------------- */
 .about {
-  /* background-color: coral; */
+  background-color: coral;
 }
 .about_hook {
   margin-bottom: 50px;
@@ -74,7 +122,7 @@ h2 {
   margin-bottom: 50px;
 }
 .about_icon {
-  /* background-color: cadetblue; */
+  background-color: cadetblue;
 }
 .about_icon_items {
   display: flex;
@@ -84,13 +132,13 @@ h2 {
 .about_icon_item {
   background-color: yellow;
   display: inline-block;
-  width: 20%;
+  width: 200px;
   height: 200px;
 }
 /* -------------------------------------------- */
 /* SKILL LEVEL */
 .skill_level_bar {
-  /* background-color: turquoise; */
+  background-color: turquoise;
   display: inline-block;
   margin: 20px 0;
   width: 100%;
@@ -99,7 +147,7 @@ h2 {
   margin-bottom: 10px;
 }
 .skill {
-  /* background-color: blue; */
+  background-color: blue;
 }
 .blank {
   background-color: #ededed;
@@ -109,11 +157,12 @@ h2 {
   border-radius: 5px;
 }
 /* PROFILE SEC */
+
 .profile {
-  /* background-color: cornflowerblue; */
+  background-color: cornflowerblue;
 }
 .skill_contents {
-  /* background-color: tomato; */
+  background-color: tomato;
 }
 .profile_skill {
   display: flex;
@@ -125,10 +174,10 @@ h2 {
   width: 48%;
 }
 .col1 {
-  /* background-color: red; */
+  background-color: red;
 }
 .col2 {
-  /* background-color: green; */
+  background-color: green;
 }
 
 .dev {
@@ -137,7 +186,7 @@ h2 {
 
 /* EDU */
 .edu_contents {
-  /* background-color: tomato; */
+  background-color: tomato;
   margin-top: 100px;
 }
 .subEduTitle {
@@ -157,7 +206,7 @@ h2 {
 }
 .edu_year,
 .award_year {
-  /* background-color: darkturquoise; */
+  background-color: darkturquoise;
   display: inline-block;
   width: 100px;
   margin-right: 40px;
@@ -165,7 +214,7 @@ h2 {
 }
 .edu_content,
 .award_content {
-  /* background-color: greenyellow; */
+  background-color: greenyellow;
   display: inline-block;
 }
 .edu_item,
@@ -176,13 +225,31 @@ h2 {
 /* RESUME SEC */
 .resume {
   background-color: violet;
-  height: 100vh;
+}
+.resume_contents {
+  background-color: wheat;
+  width: 100%;
+}
+.resume_item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.company_info {
+  background-color: brown;
+  width: 20%;
+  display: inline-block;
+}
+.company_works_contents {
+  background-color: yellow;
+  width: 70%;
+  display: inline-block;
 }
 /* -------------------------------------------- */
 /* PROJECT SEC */
+
 .project {
   background-color: teal;
-  height: 100vh;
 }
 .project_item {
   background-color: springgreen;
@@ -206,6 +273,31 @@ h2 {
   background-color: yellow;
   height: calc(100% - 220px);
   padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  .project {
+    background-color: red;
+    width: 100%;
+    padding: 0;
+  }
+  .project_item {
+    background-color: blue;
+    display: block;
+    margin: 0;
+  }
+  .project_item_contents {
+    background-color: yellow;
+    display: block;
+    margin: 35px auto;
+    width: 100%;
+    max-width: 540px;
+  }
+  .project_item_img {
+    background-color: pink;
+  }
+  .project_item_description {
+    background-color: green;
+  }
 }
 /* -------------------------------------------- */
 /* FOOTER SEC */
