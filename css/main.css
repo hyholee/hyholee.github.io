@@ -11,6 +11,30 @@ body {
   font-size: 1.3 em;
   margin-bottom: 30px;
 }
+.col1,
+.col2 {
+  display: inline-block;
+  width: 48%;
+}
+.col1 {
+  background-color: red;
+}
+.col2 {
+  background-color: green;
+}
+@media screen and (max-width: 767px) {
+  .col1,
+  .col2 {
+    width: 100%;
+  }
+  .col1 {
+    float: left;
+    background-color: red;
+  }
+  .col2 {
+    background-color: green;
+  }
+}
 
 /* -------------------------------------------- */
 /* NAV SEC */
@@ -45,23 +69,12 @@ body {
 @media screen and (max-width: 767px) {
   .nav {
     padding: 10px 20px;
-    width: 100%;
-    max-width: 540px;
   }
   .top_menu {
     padding: 10px 0;
   }
-  .menu_items {
-    display: flex;
-    justify-content: space-between;
-  }
-  .logo {
-    display: inline-block;
-  }
   .menu_item {
     display: none;
-    margin: 0 20px;
-    font-size: 0.9em;
   }
 }
 /* -------------------------------------------- */
@@ -95,20 +108,7 @@ h2 {
   .profile,
   .resume,
   .project {
-    margin: 0 auto;
     padding: 0 20px;
-    max-width: 540px;
-  }
-  .heading {
-    background-color: bisque;
-    height: 50vh;
-  }
-  .heading > h1,
-  h2 {
-    background-color: aquamarine;
-    text-align: center;
-    width: 500px;
-    margin: 0 auto;
   }
 }
 /* -------------------------------------------- */
@@ -168,17 +168,6 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-.col1,
-.col2 {
-  display: inline-block;
-  width: 48%;
-}
-.col1 {
-  background-color: red;
-}
-.col2 {
-  background-color: green;
-}
 
 .dev {
   margin-top: 50px;
@@ -221,6 +210,11 @@ h2 {
 .award_item {
   margin: 40px 0;
 }
+@media screen and (max-width: 767px) {
+  .extra_profile_info {
+    display: block;
+  }
+}
 /* -------------------------------------------- */
 /* RESUME SEC */
 .resume {
@@ -244,6 +238,23 @@ h2 {
   background-color: yellow;
   width: 70%;
   display: inline-block;
+}
+@media screen and (max-width: 767px) {
+  .resume {
+    background-color: darkcyan;
+  }
+  .resume_item {
+    display: block;
+    margin-bottom: 50px;
+  }
+  .company_info {
+    background-color: brown;
+    width: 100%;
+  }
+  .company_works_contents {
+    background-color: yellow;
+    width: 100%;
+  }
 }
 /* -------------------------------------------- */
 /* PROJECT SEC */
@@ -277,8 +288,7 @@ h2 {
 @media screen and (max-width: 767px) {
   .project {
     background-color: red;
-    width: 100%;
-    padding: 0;
+    padding: 0 20px;
   }
   .project_item {
     background-color: blue;
