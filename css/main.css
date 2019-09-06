@@ -71,12 +71,24 @@ body {
     padding: 10px 20px;
   }
   .top_menu {
-    padding: 10px 0;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 500px;
   }
   .menu_item {
     display: none;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .nav {
+    padding: 10px 30px;
+    max-width: 660px;
+  }
+  .menu_item {
+    display: none;
+  }
+}
+
 /* -------------------------------------------- */
 /* MAIN SEC */
 .main {
@@ -109,9 +121,12 @@ h2 {
   .resume,
   .project {
     padding: 0 20px;
+    margin: 0px auto;
+    max-width: 500px;
   }
 }
 /* -------------------------------------------- */
+/* ABOUT SEC */
 .about {
   background-color: coral;
 }
@@ -136,6 +151,20 @@ h2 {
   height: 200px;
 }
 /* -------------------------------------------- */
+/* PROFILE SEC */
+.profile {
+  background-color: cornflowerblue;
+}
+.skill_contents {
+  background-color: tomato;
+}
+.profile_skill {
+  display: flex;
+  justify-content: space-between;
+}
+.dev {
+  margin-top: 50px;
+}
 /* SKILL LEVEL */
 .skill_level_bar {
   background-color: turquoise;
@@ -156,24 +185,8 @@ h2 {
   height: 5px;
   border-radius: 5px;
 }
-/* PROFILE SEC */
-
-.profile {
-  background-color: cornflowerblue;
-}
-.skill_contents {
-  background-color: tomato;
-}
-.profile_skill {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dev {
-  margin-top: 50px;
-}
-
-/* EDU */
+/* -------------------------------------------- */
+/* EDU/AWARD */
 .edu_contents {
   background-color: tomato;
   margin-top: 100px;
@@ -188,7 +201,6 @@ h2 {
   width: 48%;
   float: left;
 }
-
 .extra_profile_info {
   display: flex;
   justify-content: space-between;
@@ -240,12 +252,8 @@ h2 {
   display: inline-block;
 }
 @media screen and (max-width: 767px) {
-  .resume {
-    background-color: darkcyan;
-  }
   .resume_item {
     display: block;
-    margin-bottom: 50px;
   }
   .company_info {
     background-color: brown;
@@ -258,7 +266,6 @@ h2 {
 }
 /* -------------------------------------------- */
 /* PROJECT SEC */
-
 .project {
   background-color: teal;
 }
@@ -287,28 +294,69 @@ h2 {
 }
 @media screen and (max-width: 767px) {
   .project {
-    background-color: red;
     padding: 0 20px;
   }
   .project_item {
-    background-color: blue;
     display: block;
     margin: 0;
   }
   .project_item_contents {
-    background-color: yellow;
     display: block;
     margin: 35px auto;
     width: 100%;
-    max-width: 540px;
-  }
-  .project_item_img {
-    background-color: pink;
-  }
-  .project_item_description {
-    background-color: green;
+    max-width: 500px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .project {
+    background-color: aqua;
+    padding: 0 20px;
+  }
+  .project_item {
+    display: block;
+    margin: 0 auto;
+    max-width: 660px;
+  }
+  .project_item_contents {
+    width: 320px;
+  }
+  .project_item_contents:nth-child(even) {
+    float: right;
+  }
+}
+@media screen and (min-width: 992px) {
+  .project {
+    background-color: #18191a;
+    margin: 0 auto;
+    max-width: 920px;
+    padding: 0 30px
+  }
+  .project_item {
+    display: block;
+    margin: 0 auto;
+    
+  }
+  .project_item_contents {
+    width: 450px;
+  }
+  .project_item_contents:nth-child(odd) {
+    margin-right: 15px;
+  }
+  .project_item_contents:nth-child(even) {
+    float: right;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project {
+    background-color: #ff5b15;
+    max-width: 1100px;
+
+  }
+  .project_item_contents {
+    width: 350px;
+    margin:0
+    
+  }
 /* -------------------------------------------- */
 /* FOOTER SEC */
 .footer {

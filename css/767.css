@@ -1,0 +1,14 @@
+@media screen and (max-width: 767px) {
+  .project {
+    padding: 0 20px;
+  }
+  .project_item {
+    display: block;
+    margin: 0;
+  }
+  .project_item_contents {
+    display: block;
+    margin: 35px auto;
+    width: 100%;
+  }
+}
