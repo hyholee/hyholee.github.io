@@ -3,6 +3,13 @@ body {
     'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei',
     'WenQuanYi Micro Hei', sans-serif;
 }
+.about,
+.profile,
+.resume,
+.project {
+  padding: 0 270px;
+  margin: 0 auto;
+}
 .subhead {
   margin: 100px 0 50px;
   font-size: 1.8em;
@@ -22,19 +29,7 @@ body {
 .col2 {
   background-color: green;
 }
-@media screen and (max-width: 767px) {
-  .col1,
-  .col2 {
-    width: 100%;
-  }
-  .col1 {
-    float: left;
-    background-color: red;
-  }
-  .col2 {
-    background-color: green;
-  }
-}
+
 
 /* -------------------------------------------- */
 /* NAV SEC */
@@ -94,13 +89,6 @@ body {
 .main {
   background-color: blanchedalmond;
 }
-.about,
-.profile,
-.resume,
-.project {
-  padding: 0 270px;
-  margin: 0 auto;
-}
 .heading {
   background-color: bisque;
   height: 50vh;
@@ -142,13 +130,12 @@ h2 {
 .about_icon_items {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
 }
 .about_icon_item {
   background-color: yellow;
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 20%;
+  min-height: 100px;
 }
 /* -------------------------------------------- */
 /* PROFILE SEC */
@@ -177,13 +164,18 @@ h2 {
 }
 .skill {
   background-color: blue;
+  font-size: 0;
 }
 .blank {
   background-color: #ededed;
   display: inline-block;
-  width: 19%;
+  margin-right: 5px;
+  width: calc(20% - 4px);
   height: 5px;
   border-radius: 5px;
+}
+.blank:nth-child( 5 ){
+  margin-right:0;
 }
 /* -------------------------------------------- */
 /* EDU/AWARD */
