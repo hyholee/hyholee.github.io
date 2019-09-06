@@ -273,14 +273,17 @@ h2 {
   background-color: springgreen;
   width: 100%;
   display: flex;
+  margin: 0 auto;
   justify-content: space-between;
   margin-bottom: 60px;
+  font-size: 0;
 }
 .project_item_contents {
   background-color: violet;
   display: inline-block;
   width: 30%;
   height: 400px;
+  font-size: 16px;
 }
 .project_item_img {
   background-color: blue;
@@ -298,7 +301,7 @@ h2 {
   }
   .project_item {
     display: block;
-    margin: 0;
+    margin: 0 auto;
   }
   .project_item_contents {
     display: block;
@@ -338,9 +341,7 @@ h2 {
   }
   .project_item_contents {
     width: 450px;
-  }
-  .project_item_contents:nth-child(odd) {
-    margin-right: 15px;
+   
   }
   .project_item_contents:nth-child(even) {
     float: right;
@@ -349,13 +350,19 @@ h2 {
 @media screen and (min-width: 1200px) {
   .project {
     background-color: #ff5b15;
-    max-width: 1100px;
+    max-width: 1140px;
 
   }
   .project_item_contents {
     width: 350px;
-    margin:0
-    
+    margin-right: 45px;
+  }
+
+  .project_item_contents:nth-child(even) {
+    float: none;
+  }
+  .project_item_contents:nth-child(3n) {
+    margin-right: 0;
   }
 /* -------------------------------------------- */
 /* FOOTER SEC */
