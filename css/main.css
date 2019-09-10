@@ -1,7 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-.about,
 .profile,
 .resume,
 .project {
@@ -10,7 +9,6 @@ body {
 }
 @media screen and (max-width: 767px) {
   .nav,
-  .about,
   .profile,
   .resume,
   .project {
@@ -19,7 +17,6 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .nav,
-  .about,
   .profile,
   .resume,
   .project {
@@ -28,7 +25,6 @@ body {
 }
 @media screen and (min-width: 992px) {
   .nav,
-  .about,
   .profile,
   .resume,
   .project {
@@ -37,7 +33,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .nav,
-  .about,
   .profile,
   .resume,
   .project {
@@ -45,17 +40,32 @@ body {
   }
 }
 
-.subhead {
-  margin: 100px 0 50px;
-  font-size: 1 em;
+h2 {
+  font-size: 1.8em;
+  margin: 100px 0 25px;
   letter-spacing: 10px;
 }
-.subtitle {
+h3 {
+  font-size: 0.9em;
+  margin: 0 0 60px;
+  letter-spacing: 5px;
+  color: gray;
+}
+h4 {
   font-size: 1.5em;
-  margin: 10px 0 60px;
+  margin-bottom: 15px;
+}
+h5 {
+  font-size: 1.4em;
+  margin: 10px 0 20px 0;
 }
 p {
   line-height: 35px;
+}
+hr {
+  margin: 50px 0;
+  border: 0;
+  border-top: 1px solid #eee;
 }
 .col1,
 .col2 {
@@ -75,29 +85,34 @@ p {
   background-color: white;
   position: sticky;
   top: 0;
+  box-shadow: 0 0 2px #333;
 }
 .nav {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   margin: 0 auto;
 }
 .top_menu {
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 .menu_items {
   display: flex;
   justify-content: space-between;
+  line-height: calc(60px - 2px);
 }
 .logo {
   display: inline-block;
 }
 .menu_items_list {
   font-weight: 200;
-  display: inline-block;
+  display: flex;
 }
 .menu_item {
   display: inline-block;
   margin: 0 20px;
   font-size: 0.9em;
+}
+.menu_items_list > li > .active {
+  border-bottom: 3px solid red;
 }
 @media screen and (max-width: 767px) {
   .menu_item {
@@ -118,7 +133,7 @@ p {
   height: 50vh;
 }
 .heading > h1,
-h2 {
+.heading > p {
   background-color: aquamarine;
   text-align: center;
   width: 50%;
@@ -126,7 +141,10 @@ h2 {
 }
 
 /* -------------------------------------------- */
-/* ABOUT SEC */
+/* PROFILE SEC */
+.about_contents {
+  margin-bottom: 100px;
+}
 .about_hook {
   margin-bottom: 50px;
 }
@@ -141,13 +159,11 @@ h2 {
 .about_icon_item {
   background-color: yellow;
   display: inline-block;
-  width: 10%;
+  width: 155px;
   padding: 20px;
-  min-height: 100px;
+  min-height: 130px;
   line-height: 20px;
 }
-/* -------------------------------------------- */
-/* PROFILE SEC */
 
 .skill_contents {
   /* background-color: tomato; */
@@ -183,6 +199,14 @@ h2 {
 }
 .blank:nth-child(5) {
   margin-right: 0;
+}
+.skill_colored {
+  background-color: red;
+  display: inline-block;
+  margin-right: 5px;
+  width: calc(20% - 4px);
+  height: 5px;
+  border-radius: 5px;
 }
 /* -------------------------------------------- */
 /* EDU/AWARD */
@@ -226,6 +250,12 @@ h2 {
     display: block;
   }
 }
+@media screen and (min-width: 992px) {
+  .edu_year,
+  .award_year {
+    float: left;
+  }
+}
 /* -------------------------------------------- */
 /* RESUME SEC */
 .resume {
@@ -238,7 +268,7 @@ h2 {
 .resume_item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .company_info {
   /* background-color: brown; */
@@ -284,6 +314,11 @@ h2 {
   margin: 0 auto 35px;
   font-size: 16px;
   cursor: pointer;
+}
+.project_item_contents:hover {
+  box-shadow: 0px -1px 30px #838c8d;
+  background-color: transparent;
+  border-radius: 5px 5px 5px 5px;
 }
 .project_item_img {
   background-color: gray;
