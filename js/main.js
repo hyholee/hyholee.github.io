@@ -1,18 +1,37 @@
 $(function() {
-  let menu = $('.menu_items_list a.menu_item');
-  menu.on('click', function(e) {
-    let target = $($(this).attr('href'));
+  let menu = $('.menu_items_list li');
+
+  // Active Underbar
+  $(menu).on('click', function(e) {
+    $(menu).removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // Scroll Section
+  $('nav a').click(function(e) {
+    let section = $(this).attr('href');
+    console.log(this);
+    let top_offset = 60;
+    let target = $(section).offset().top - top_offset;
     $('html, body').animate(
       {
-        scrollTop: target.offset().top
+        scrollTop: target
       },
       600
     );
-    $(this).addClass('active');
-    e.preventDefault();
+    event.preventDefault();
   });
 
-  console.log('check');
+  // let menu = $('.menu_item');
+  // menu.click(function(e) {
+  //   let target = $($(this).attr('href'));
+  //   $('html, body').animate(
+  //     {
+  //       scrollTop: target.offset().top
+  //     },
+  //     600
+  //   );
+  //   e.preventDefault();
 
   // function findPosition() {
   //       $('section').each(function() {

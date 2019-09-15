@@ -3,15 +3,17 @@ body {
 }
 .profile,
 .resume,
-.project {
-  padding: 0 20px;
+.project,
+.footer {
+  padding: 10px 20px;
   margin: 0px auto;
 }
 @media screen and (max-width: 767px) {
   .nav,
   .profile,
   .resume,
-  .project {
+  .project,
+  .footer {
     max-width: 500px;
   }
 }
@@ -19,7 +21,8 @@ body {
   .nav,
   .profile,
   .resume,
-  .project {
+  .project,
+  .footer {
     max-width: 660px;
   }
 }
@@ -27,7 +30,8 @@ body {
   .nav,
   .profile,
   .resume,
-  .project {
+  .project,
+  .footer {
     max-width: 920px;
   }
 }
@@ -35,14 +39,15 @@ body {
   .nav,
   .profile,
   .resume,
-  .project {
+  .project,
+  .footer {
     max-width: 1140px;
   }
 }
 
 h2 {
   font-size: 1.8em;
-  margin: 100px 0 25px;
+  margin: 50px 0 25px;
   letter-spacing: 10px;
 }
 h3 {
@@ -54,6 +59,7 @@ h3 {
 h4 {
   font-size: 1.5em;
   margin-bottom: 15px;
+  line-height: 1.5em;
 }
 h5 {
   font-size: 1.4em;
@@ -72,12 +78,12 @@ hr {
   display: inline-block;
   width: 48%;
 }
-.col1 {
-  /* background-color: red; */
+/* .col1 {
+  background-color: red;
 }
 .col2 {
-  /* background-color: green; */
-}
+  background-color: green;
+} */
 
 /* -------------------------------------------- */
 /* NAV SEC */
@@ -86,13 +92,11 @@ hr {
   position: sticky;
   top: 0;
   box-shadow: 0 0 5px #9999;
+  z-index: 999;
 }
 .nav {
   padding: 0 20px;
   margin: 0 auto;
-}
-.top_menu {
-  /* padding: 10px 0; */
 }
 .menu_items {
   display: flex;
@@ -111,7 +115,7 @@ hr {
   margin: 0 20px;
   font-size: 0.9em;
 }
-.menu_items_list > li > .active {
+.menu_items_list > li.active {
   border-bottom: 3px solid red;
 }
 
@@ -148,7 +152,7 @@ a:hover {
   display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
+  margin: 5px;
   position: relative;
   background: #cdcdcd;
   border-radius: 3px;
@@ -224,10 +228,15 @@ a:hover {
 
 .heading {
   background-color: bisque;
-  height: 50vh;
+  height: 100vh;
 }
-.heading > h1,
-.heading > p {
+.greeting {
+  top: 45%;
+  position: absolute;
+  width: 100%;
+}
+.greeting > h1,
+.greeting > p {
   background-color: aquamarine;
   text-align: center;
   width: 50%;
@@ -254,8 +263,8 @@ a:hover {
   display: inline-block;
   width: 155px;
   padding: 35px;
-  min-height: 130px;
-  line-height: 20px;
+  /* min-height: 130px;
+  line-height: 20px; */
   border-radius: 5px;
   border: 1px solid lightsalmon;
 }
@@ -494,10 +503,36 @@ a:hover {
 }
 /* -------------------------------------------- */
 /* FOOTER SEC */
-.footer {
+#contact {
   background-color: #18191a;
+}
+.footer {
   height: calc(100vh - 55px);
 }
-.footer > p {
-  color: wheat;
+.contact_header > h2 {
+  color: white;
+}
+.contact_info {
+  display: flex;
+  justify-content: space-between;
+}
+address > p,
+address > a {
+  color: white;
+  line-height: 50px;
+}
+.message {
+  /* width: calc(100% - 6px); */
+  padding: 20px;
+  border: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.message_name,
+.message_email {
+  height: auto;
+  margin-bottom: 10px;
+}
+.message_main {
+  height: 200px;
 }
