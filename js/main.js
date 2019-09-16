@@ -22,31 +22,12 @@ $(function() {
     event.preventDefault();
   });
 
-  // let menu = $('.menu_item');
-  // menu.click(function(e) {
-  //   let target = $($(this).attr('href'));
-  //   $('html, body').animate(
-  //     {
-  //       scrollTop: target.offset().top
-  //     },
-  //     600
-  //   );
-  //   e.preventDefault();
+  // Hamberger Menu
+  (function() {
+    $('.menu-wrapper').on('click', function() {
+      $('.hamburger-menu').toggleClass('animate');
+    });
+  })();
 
-  // function findPosition() {
-  //       $('section').each(function() {
-  //         if($(this).offset().top - $(window).scrollTop()) < 20){
-  //           console.log(this)
-  //           menu.removeClass('active');
-  //           $('.menu_items_list')
-  //             .find('[data-scroll="'+ $(this).attr('id') +'"]')
-  //             .addClass('active');
-  //         };
-  //       };
-  //     };
-  //   $(window).on('scroll', function() {
-  //     findPosition();
-  //   });
-
-  //   findPosition();
+  // test
 });
