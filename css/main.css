@@ -432,6 +432,12 @@ hr {
   height: 180px;
   border-radius: 5px 5px 0 0;
 }
+.strava {
+  background-image: url(/project/strava/mainimg.jpg);
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .project_item_description {
   background-color: rgb(255, 255, 255);
   height: calc(100% - 220px);
