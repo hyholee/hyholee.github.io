@@ -29,5 +29,16 @@ $(function() {
     });
   })();
 
+  // Branding hover
+  $('.branding_select').on('mouseenter', function() {
+    $('.hidden_branding_project').toggle();
+  });
+  $('.branding_select').on('mouseleave', function() {
+    $('.hidden_branding_project').toggle();
+  });
+
   // test
+  $('.chichi').on('click', function(e) {
+    console.log('check');
+  });
 });

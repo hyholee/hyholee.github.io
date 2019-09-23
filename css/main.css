@@ -60,12 +60,21 @@ h3 {
 }
 h4 {
   font-size: 1.5em;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 1.5em;
 }
 h5 {
   font-size: 1.4em;
   margin: 10px 0 20px 0;
+}
+h6 {
+  font-size: 1.5em;
+  margin: 60px 0;
+  line-height: 45px;
+  /* background-color: yellow; */
+}
+h6:hover {
+  color: rgb(255, 114, 89);
 }
 p {
   line-height: 35px;
@@ -78,7 +87,7 @@ span {
 hr {
   margin: 50px 0;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgb(230, 230, 230);
 }
 .col1,
 .col2 {
@@ -277,6 +286,7 @@ hr {
   width: calc(20% - 4px);
   height: 5px;
   border-radius: 5px;
+  box-shadow: 1px 1px 4px rgb(182, 182, 182);
 }
 .blank:nth-child(5) {
   margin-right: 0;
@@ -384,6 +394,9 @@ hr {
 .job_date {
   background-image: url(/src/icon/calendar.png);
 }
+.job_position {
+  background-image: url(/src/icon/job_icon.png);
+}
 
 .company_works_contents {
   width: 70%;
@@ -391,6 +404,7 @@ hr {
 }
 .job_description {
   color: #bbbbbb;
+  margin-top: 25px;
 }
 @media screen and (max-width: 767px) {
   .resume_item {
@@ -416,33 +430,70 @@ hr {
 .project_item_contents {
   display: inline-block;
   width: 30%;
-  height: 400px;
+  height: 450px;
   margin: 0 auto 35px;
   font-size: 16px;
   cursor: pointer;
+  position: relative;
 }
 .project_item_contents:hover {
   box-shadow: 0px -1px 30px #a4a4a4;
   background-color: transparent;
   border-radius: 5px 5px 5px 5px;
 }
+.branding_select:hover .branding,
+.branding_select:hover .project_item_description {
+  opacity: 0.1;
+}
+.branding_select:hover .hidden_branding_project {
+  opacity: 1;
+}
+.hidden_branding_project {
+  display: none;
+  position: absolute;
+  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .project_item_img {
   background-color: gray;
   width: 100%;
   height: 180px;
   border-radius: 5px 5px 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .strava {
   background-image: url(/project/strava/mainimg.jpg);
-  background-size: 350px;
-  background-repeat: no-repeat;
   background-position: center center;
+}
+.typography {
+  background-image: url(/project/typo/kristian-strand-p8gzCnZf39k-unsplash.jpg);
+  background-position: center bottom;
+}
+.poster {
+  background-image: url(/project/poster/think_poster_mockup.jpg);
+}
+.magazine {
+  background-image: url(/project/Magazine/2.png);
+  background-position: center -30px;
+}
+.branding {
+  background-image: url(/project/branding/branding.jpg);
 }
 .project_item_description {
   background-color: rgb(255, 255, 255);
   height: calc(100% - 220px);
   padding: 20px;
   border-radius: 0 0 5px 5px;
+}
+.project_item_summary {
+  display: flex;
+  color: #bbbbbb;
 }
 @media screen and (max-width: 767px) {
   .project_item {
@@ -566,14 +617,21 @@ textarea {
 }
 
 /* Carousel */
+.carousel_img {
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  width: 100%;
+  margin: -5% 0;
+}
 .carousel {
-  /* position: relative; */
+  position: relative;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
 }
 .carousel-inner {
   position: relative;
   overflow: hidden;
-  /* width: 100%; */
+  max-height: 80vh;
+  width: 100%;
 }
 .carousel-open:checked + .carousel-item {
   position: static;
@@ -586,9 +644,9 @@ textarea {
   transition: opacity 0.6s ease-out;
 }
 .carousel-item img {
-  display: block;
-  height: auto;
-  max-width: 100%;
+  /* display: block; */
+  /* height: auto; */
+  /* width: 100%; */
 }
 .carousel-control {
   background: rgba(0, 0, 0, 0.28);
