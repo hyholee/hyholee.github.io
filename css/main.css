@@ -71,7 +71,6 @@ h6 {
   font-size: 1.5em;
   margin: 60px 0;
   line-height: 45px;
-  /* background-color: yellow; */
 }
 h6:hover {
   color: rgb(255, 114, 89);
@@ -89,17 +88,18 @@ hr {
   border: 0;
   border-top: 1px solid rgb(230, 230, 230);
 }
+.shift {
+  color: black;
+  font-size: 0.5em;
+  top: -5px;
+  position: relative;
+}
 .col1,
 .col2 {
   display: inline-block;
   width: 48%;
 }
-/* .col1 {
-  background-color: red;
-}
-.col2 {
-  background-color: green;
-} */
+
 .small_icon {
   display: inline-block;
   width: 15px;
@@ -139,8 +139,16 @@ hr {
   margin: 0 20px;
   font-size: 0.9em;
 }
+.menu_item_ham {
+  line-height: 100px;
+}
 .menu_items_list > li.active {
   border-bottom: 3px solid rgb(255, 114, 89);
+}
+.mobile_nav {
+  display: none;
+  padding: 5em;
+  text-align: center;
 }
 .menu-wrapper {
   position: relative;
@@ -234,9 +242,8 @@ hr {
   display: inline-block;
   width: 155px;
   padding: 35px;
-  /* min-height: 130px;
-  line-height: 20px; */
-  min-height: 135px;
+  line-height: 20px;
+  */min-height: 135px;
   border-radius: 5px;
   border: 1px solid lightsalmon;
 }
@@ -366,7 +373,6 @@ hr {
 @media screen and (min-width: 1200px) {
   .edu_year,
   .award_year {
-    /* display: inline-block; */
     width: 140px;
     margin-right: 40px;
     margin: 5px 0 10px 0;
@@ -430,7 +436,6 @@ hr {
 .project_item_contents {
   display: inline-block;
   width: 30%;
-  /* height: 450px; */
   margin: 0 auto 35px;
   font-size: 16px;
   cursor: pointer;
@@ -505,6 +510,7 @@ hr {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
   .project_item {
@@ -595,7 +601,6 @@ address > a:hover {
   font-size: 0;
 }
 .message {
-  /* width: calc(100% - 6px); */
   padding: 20px;
   border: 0;
   width: calc(100% - 40px);
@@ -664,11 +669,6 @@ textarea {
   opacity: 0;
   -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out;
-}
-.carousel-item img {
-  /* display: block; */
-  /* height: auto; */
-  /* width: 100%; */
 }
 .carousel-control {
   background: rgba(0, 0, 0, 0.28);
