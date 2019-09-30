@@ -430,7 +430,7 @@ hr {
 .project_item_contents {
   display: inline-block;
   width: 30%;
-  height: 450px;
+  /* height: 450px; */
   margin: 0 auto 35px;
   font-size: 16px;
   cursor: pointer;
@@ -471,6 +471,10 @@ hr {
   background-image: url(/project/strava/mainimg.jpg);
   background-position: center center;
 }
+.voice_car {
+  background-image: url(/project/VUI/main_mockups.jpg);
+  background-position: center center;
+}
 .typography {
   background-image: url(/project/typo/kristian-strand-p8gzCnZf39k-unsplash.jpg);
   background-position: center bottom;
@@ -494,6 +498,13 @@ hr {
 .project_item_summary {
   display: flex;
   color: #bbbbbb;
+  overflow: hidden;
+  white-space: normal;
+  height: 8.3em;
+  word-wrap: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 767px) {
   .project_item {
@@ -615,8 +626,19 @@ textarea {
 .send_button:hover {
   color: white;
 }
+@media screen and (max-width: 991px) {
+  .contact_info {
+    display: inline-block;
+  }
+  .my_contact_info,
+  .my_contact_email {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+}
 
 /* Carousel */
+/* NEED EDIT!!!!!  */
 .carousel_img {
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
