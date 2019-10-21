@@ -88,18 +88,15 @@ hr {
   border: 0;
   border-top: 1px solid rgb(230, 230, 230);
 }
-.shift {
-  color: black;
-  font-size: 0.5em;
-  top: -5px;
-  position: relative;
+sup {
+  vertical-align: super;
+  font-size: smaller;
 }
 .col1,
 .col2 {
   display: inline-block;
   width: 48%;
 }
-
 .small_icon {
   display: inline-block;
   width: 15px;
@@ -233,7 +230,6 @@ hr {
 .about_text {
   margin-bottom: 50px;
 }
-
 .about_icon_items {
   display: flex;
   justify-content: space-between;
@@ -243,7 +239,7 @@ hr {
   width: 155px;
   padding: 35px;
   line-height: 20px;
-  */min-height: 135px;
+  min-height: 135px;
   border-radius: 5px;
   border: 1px solid lightsalmon;
 }
@@ -293,7 +289,7 @@ hr {
   width: calc(20% - 4px);
   height: 5px;
   border-radius: 5px;
-  box-shadow: 1px 1px 4px rgb(182, 182, 182);
+  box-shadow: 1px 1px 4px -1px rgb(182, 182, 182);
 }
 .blank:nth-child(5) {
   margin-right: 0;
