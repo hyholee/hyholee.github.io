@@ -2,42 +2,51 @@ $(function() {
   // Active Under_bar
   let menu = $('.menu_items_list li');
 
+  // Scroll Under_bar Active
   $(window).scroll(function() {
-    let top_offset = 55;
+    let top_offset = 60;
     let top_scroll = $(document).scrollTop();
-    let low = $(document).height() - $(window).height() - $(window).scrollTop();
     let profile = $('#profile').position();
     let resume = $('#resume').position();
     let project = $('#project').position();
     let contact = $('#contact').position();
 
-    // console.log(top);
-    console.log(low);
-    // console.log(profile.top);
-    // console.log(resume.top);
-    // console.log(project.top);
-    // console.log(contact.top);
+    if (top_scroll < profile.top) {
+      $(menu).removeClass('active');
+    }
+    if (top_scroll >= profile.top - top_offset) {
+      $(menu[1]).removeClass('active');
+      $(menu[2]).removeClass('active');
+      $(menu[3]).removeClass('active');
 
-    if (top_scroll >= profile.top) {
       $(menu[0]).addClass('active');
-      console.log('profile');
     }
-    if (top_scroll >= resume.top) {
+    if (top_scroll >= resume.top - top_offset) {
+      $(menu[0]).removeClass('active');
+      $(menu[2]).removeClass('active');
+      $(menu[3]).removeClass('active');
+
       $(menu[1]).addClass('active');
-      console.log('resume');
     }
 
-    if (top_scroll >= project.top) {
+    if (top_scroll >= project.top - top_offset) {
+      $(menu[0]).removeClass('active');
+      $(menu[1]).removeClass('active');
+      $(menu[3]).removeClass('active');
+
       $(menu[2]).addClass('active');
-      console.log('project');
     }
 
-    if (top_scroll >= contact.top) {
+    if (top_scroll >= contact.top - top_offset) {
+      $(menu[0]).removeClass('active');
+      $(menu[1]).removeClass('active');
+      $(menu[2]).removeClass('active');
+
       $(menu[3]).addClass('active');
-      console.log('contact');
     }
   });
 
+  // Under-bar Active
   $(menu).on('click', function(e) {
     $(menu).removeClass('active');
     $(this).addClass('active');
